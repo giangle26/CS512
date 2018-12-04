@@ -11,9 +11,9 @@
 <%@ page import ="javax.sql.*" %>
 <%
 	String locFrom=request.getParameter("locFrom"); 
-	String beginTime=request.getParameter("beginTime"); 
+	String beginTime=request.getParameter("beginTimeHour")+":"+request.getParameter("beginTimeMin"); 
 	String locTo=request.getParameter("locTo"); 
-	String endTime=request.getParameter("endTime"); 
+	String endTime=request.getParameter("endTimeHour")+":"+request.getParameter("endTimeMin"); 
 	
 	if (locFrom.isEmpty()) {
 		out.println("From Location field is empty.");

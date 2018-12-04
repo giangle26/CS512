@@ -8,10 +8,92 @@
 <form action="needHelp.jsp" method="post">
 
 What needs to be delivered :<input type="text" name="object" /><br/><br/>
-From :<input type="text" name="locFrom" /><br/><br/>
-Time to pick up (Format: Hr:Min) :<input type="text" name="beginTime" /><br/><br/>
-To :<input type="text" name="locTo" /><br/><br/>
-Delivered by (Format: Hr:Min) :<input type="text" name="endTime" /><br/><br/>
+From Location :
+<select name="locFrom">
+	<option>Livingston</option>
+	<option>College Ave</option>
+	<option>Douglass</option>
+	<option>Busch</option>
+	<option>Cook</option>
+</select>
+<br/><br/>
+Time to be picked up:
+<select name="beginTimeHour">
+	<option>0</option>
+	<option>1</option>
+	<option>2</option>
+	<option>3</option>
+	<option>4</option>
+	<option>5</option>
+	<option>6</option>
+	<option>7</option>
+	<option>8</option>
+	<option>9</option>
+	<option>10</option>
+	<option>11</option>
+	<option>12</option>
+	<option>13</option>
+	<option>14</option>
+	<option>15</option>
+	<option>16</option>
+	<option>17</option>
+	<option>18</option>
+	<option>19</option>
+	<option>20</option>
+	<option>21</option>
+	<option>22</option>
+	<option>23</option>
+</select>
+<select name="beginTimeMin">
+	<option>00</option>
+	<option>15</option>
+	<option>30</option>
+	<option>45</option>
+</select>
+<br/><br/>
+To Location :
+<select name="locTo">
+	<option>Livingston</option>
+	<option>College Ave</option>
+	<option>Douglass</option>
+	<option>Busch</option>
+	<option>Cook</option>
+</select>
+<br/><br/>
+Delivered By :
+<select name="endTimeHour">
+	<option>0</option>
+	<option>1</option>
+	<option>2</option>
+	<option>3</option>
+	<option>4</option>
+	<option>5</option>
+	<option>6</option>
+	<option>7</option>
+	<option>8</option>
+	<option>9</option>
+	<option>10</option>
+	<option>11</option>
+	<option>12</option>
+	<option>13</option>
+	<option>14</option>
+	<option>15</option>
+	<option>16</option>
+	<option>17</option>
+	<option>18</option>
+	<option>19</option>
+	<option>20</option>
+	<option>21</option>
+	<option>22</option>
+	<option>23</option>
+</select>
+<select name="endTimeMin">
+	<option>00</option>
+	<option>15</option>
+	<option>30</option>
+	<option>45</option>
+</select>
+<br/><br/>
 <br/><br/>
 
 <button type="submit">Submit Request</button>

@@ -7,7 +7,7 @@
 <title>Admin Main Menu</title>
 </head>
 <body>
-<a href="index.html">Home</a>
+<a href="home.html">Home</a>
 	<%@ page import="java.sql.*"%>
 	<%@ page import="javax.sql.*"%>
 	<%@ page import ="java.util.ArrayList"%>

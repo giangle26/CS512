@@ -12,10 +12,10 @@
 <%
 	String object=request.getParameter("object"); 
 	String locFrom=request.getParameter("locFrom"); 
-	String beginTime=request.getParameter("beginTime"); 
+	String beginTime=request.getParameter("beginTimeHour")+":"+request.getParameter("beginTimeMin"); 
 	String locTo=request.getParameter("locTo"); 
-	String endTime=request.getParameter("endTime"); 
-	
+	String endTime=request.getParameter("endTimeHour")+":"+request.getParameter("endTimeMin"); 
+
 	if (object.isEmpty()) {
 		out.println("Object field is empty.");
 	} else if (locFrom.isEmpty()) {
