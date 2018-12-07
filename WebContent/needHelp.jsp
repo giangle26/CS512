@@ -35,7 +35,14 @@
 		
 		Dijkstra newInstance = new Dijkstra();
 		out.println("Submitted, finding helper now... "); 
-		out.println(newInstance.printPath());
+		String thing = newInstance.printPath();
+		out.println(thing);
+		if(thing.charAt(0) != 'S'){
+			Statement del = con.createStatement();
+			int j = del.executeUpdate("delete from Requests where userType = 'help' AND object = '"+object+
+					"' AND locFrom = '"+locFrom+"' AND beginTime = '"+beginTime+"' AND locTo = '"+locTo+"' AND endTime = '"+endTime+"'");
+		}
+		
 	}
 %>
 <a href="home.html">Home</a>

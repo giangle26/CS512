@@ -222,12 +222,12 @@ public class Dijkstra {
             	returnStr.append("\n");
             	
             	
-            	
             }
             System.out.println("Total time needed: " + dist[goal] / 60 + " hours " + dist[goal] % 60 +" minutes.\n");
             String tmp3 = "Total time needed: " + dist[goal] / 60 + " hours " + dist[goal] % 60 +" minutes.\n";
             returnStr.append(tmp3);
             returnStr.append("\n");
+            System.out.println(returnStr.toString());
             return returnStr.toString();
             
         }

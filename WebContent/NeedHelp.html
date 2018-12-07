@@ -1,103 +1,139 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Help Request</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Help Request</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .hero-image {
+            background-image: url("http://devco.org/download/images/side-carousel/rab/rab2_overlay-x2.jpg");
+            background-color: #cccccc;
+            height: 980px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .hero-text {
+            text-align: center;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+    </style>
+
 </head>
 <body>
-<form action="needHelp.jsp" method="post">
+    <div class="hero-image">
+        <div style="text-align: center">
+            <img src="https://1000logos.net/wp-content/uploads/2017/08/Rutgers-University-Logo.png" width="460" height="180" alt="W3Schools.com">
+        </div>
+        <div style="text-align: center">
+            <div class="hero-text">
+                <form action="needHelp.jsp" method="post">
 
-What needs to be delivered :<input type="text" name="object" /><br/><br/>
-From Location :
-<select name="locFrom">
-	<option>Livingston</option>
-	<option>College Ave</option>
-	<option>Douglass</option>
-	<option>Busch</option>
-	<option>Cook</option>
-</select>
-<br/><br/>
-Time to be picked up:
-<select name="beginTimeHour">
-	<option>0</option>
-	<option>1</option>
-	<option>2</option>
-	<option>3</option>
-	<option>4</option>
-	<option>5</option>
-	<option>6</option>
-	<option>7</option>
-	<option>8</option>
-	<option>9</option>
-	<option>10</option>
-	<option>11</option>
-	<option>12</option>
-	<option>13</option>
-	<option>14</option>
-	<option>15</option>
-	<option>16</option>
-	<option>17</option>
-	<option>18</option>
-	<option>19</option>
-	<option>20</option>
-	<option>21</option>
-	<option>22</option>
-	<option>23</option>
-</select>
-<select name="beginTimeMin">
-	<option>00</option>
-	<option>15</option>
-	<option>30</option>
-	<option>45</option>
-</select>
-<br/><br/>
-To Location :
-<select name="locTo">
-	<option>Livingston</option>
-	<option>College Ave</option>
-	<option>Douglass</option>
-	<option>Busch</option>
-	<option>Cook</option>
-</select>
-<br/><br/>
-Delivered By :
-<select name="endTimeHour">
-	<option>0</option>
-	<option>1</option>
-	<option>2</option>
-	<option>3</option>
-	<option>4</option>
-	<option>5</option>
-	<option>6</option>
-	<option>7</option>
-	<option>8</option>
-	<option>9</option>
-	<option>10</option>
-	<option>11</option>
-	<option>12</option>
-	<option>13</option>
-	<option>14</option>
-	<option>15</option>
-	<option>16</option>
-	<option>17</option>
-	<option>18</option>
-	<option>19</option>
-	<option>20</option>
-	<option>21</option>
-	<option>22</option>
-	<option>23</option>
-</select>
-<select name="endTimeMin">
-	<option>00</option>
-	<option>15</option>
-	<option>30</option>
-	<option>45</option>
-</select>
-<br/><br/>
-<br/><br/>
+                    What needs to be delivered :<input type="text" name="object" /><br /><br />
+                    From Location :
+                    <select name="locFrom">
+                        <option>Livingston</option>
+                        <option>College Ave</option>
+                        <option>Douglass</option>
+                        <option>Busch</option>
+                        <option>Cook</option>
+                    </select>
+                    <br /><br />
+                    Time to be picked up:
+                    <select name="beginTimeHour">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                    </select>
+                    <select name="beginTimeMin">
+                        <option>00</option>
+                        <option>15</option>
+                        <option>30</option>
+                        <option>45</option>
+                    </select>
+                    <br /><br />
+                    To Location :
+                    <select name="locTo">
+                        <option>Livingston</option>
+                        <option>College Ave</option>
+                        <option>Douglass</option>
+                        <option>Busch</option>
+                        <option>Cook</option>
+                    </select>
+                    <br /><br />
+                    Delivered By :
+                    <select name="endTimeHour">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                    </select>
+                    <select name="endTimeMin">
+                        <option>00</option>
+                        <option>15</option>
+                        <option>30</option>
+                        <option>45</option>
+                    </select>
+                    <br /><br />
+                    <br /><br />
 
-<button type="submit">Submit Request</button>
+                    <button type="submit">Submit Request</button>
 
-</form>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
