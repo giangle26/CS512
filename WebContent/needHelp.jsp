@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" import="com.cs512.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -32,7 +32,10 @@
 		"admincs512","Matkhau18!"); 
 		Statement st= con.createStatement(); 
 		int i=st.executeUpdate("insert into Requests values ('help','"+object+"','"+locFrom+"','"+beginTime+"','"+locTo+"','"+endTime+"')"); 
+		
+		Dijkstra newInstance = new Dijkstra();
 		out.println("Submitted, finding helper now... "); 
+		out.println(newInstance.printPath());
 	}
 %>
 <a href="home.html">Home</a>
