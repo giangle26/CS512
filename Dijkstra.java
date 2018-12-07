@@ -1,4 +1,3 @@
-import org.jsoup.Jsoup;
 import java.io.IOException;
 import java.util.*;
 import java.sql.*;
@@ -186,16 +185,35 @@ public class Dijkstra {
             
             if(dist[goal] == 2147483647)
             {
-            	System.out.println("fail");
+            	System.out.println("Sorry, no suitable helpers found.");
+            	continue;
             }
             int now = goal;
-            
+            ArrayList<Helper> HelperForThis=new ArrayList<Helper>();
             while(now != start)
             {
-            	System.out.println(who[now].FromLocation + " " + who[now].StartTime + " " + who[now].ToLocation+ " " + who[now].EndTime);
+            	HelperForThis.add(who[now]);
             	now = prev[now];
             }
-            System.out.println(dist[goal]);
+            int t = st;
+            for(int i = HelperForThis.size() - 1; i >=0; i--)
+            {
+            	
+            	Helper h = HelperForThis.get(i);
+            	System.out.println("Helper: " + h.FromLocation + " " + h.StartTime + " " + h.ToLocation+ " " + h.EndTime);
+            	
+            	if (t < ttm(h.StartTime))
+            	{
+            		System.out.println("Wait at " + h.FromLocation + " till " + h.StartTime + ". ");
+            		t = ttm(h.StartTime);
+            	}
+            	System.out.println("Deliver " + nh.object + " from " + h.FromLocation + " to " + h.ToLocation + ". Time: " + mtt(t) + " to " + mtt(t + eta[myMap.get(h.FromLocation)][myMap.get(h.ToLocation)]) + "\n");
+            	
+            	
+            	
+            	
+            }
+            System.out.println("Total time needed: " + dist[goal] / 60 + " hours " + dist[goal] % 60 +" minutes.\n");
             
         }
     }
@@ -203,6 +221,11 @@ public class Dijkstra {
     {
     	String[] parts = str.split(":");
     	return Integer.parseInt(parts[0]) * 60 + Integer.parseInt(parts[1]);
+    }
+    public static String mtt(int t)
+    {
+    	if(t% 60 == 0)return String.valueOf(t / 60) + ":00" ;
+    	return String.valueOf(t / 60) + ":" + String.valueOf(t % 60);
     }
     
 }
